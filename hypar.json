@@ -1,0 +1,34 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "d659e21c-6851-4ffe-bcd1-3c61dc2ffb22",
+  "name": "WFS_test",
+  "model_dependencies": [
+    {
+      "name": "location"
+    }
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Bounds": {
+        "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+      }
+    }
+  },
+  "element_types": [
+    "https://raw.githubusercontent.com/hypar-io/Schemas/master/Origin.json"
+  ],
+  "filters": {
+    "Gebäude": {
+      "context": "[*Name=AX_Gebaeude]"
+    },
+    "Flurstück": {
+      "context": "[*Name=AX_Flurstueck]"
+    }
+  },
+  "description": "The WFSTest function.",
+  "language": "C#",
+  "repository_url": "https://github.com/hypar-io/function",
+  "last_updated": "0001-01-01T00:00:00",
+  "cli_version": "0.9.6"
+}
